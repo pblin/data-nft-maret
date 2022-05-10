@@ -1,0 +1,63 @@
+@import '../../styles/vars';
+
+.dataset-info-view .marketplace-toolbar {
+  margin-bottom: 20px;
+}
+
+.StripeCheckout {
+  width: 100% !important;
+  margin-top: 10px;
+  font-family: $app-font-main;
+  background: $secondary-main !important;
+}
+
+.dataset-info-view .info-panel {
+  border: 1px solid #dedfe0;
+  box-sizing: border-box;
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #47494d;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.dataset-info-view .info-panel p {
+  font-family: Georgia, serif;
+  font-size: 16px;
+  margin-left: 20px;
+  line-height: 50px;
+  display: inline-block;
+}
+
+.dataset-info-view .info-panel svg {
+  font-size: 15px;
+  margin-right: 5px;
+}
+
+.dataset-info-view {
+  .card-content-title {
+    color: $secondary-main;
+    font-weight: 500;
+  }
+
+  .card-content-sub-title {
+    font-weight: bold;
+    padding-top: 10px;
+  }
+
+  .card-content-sub-desc {
+    padding-bottom: 10px;
+  }
+
+  .card-content-price {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: bolder;
+  }
+
+  .dataset-buy {
+    width: 100%;
+    margin-top: 10px;
+  }
+}

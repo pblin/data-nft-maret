@@ -1,0 +1,10 @@
+{
+  "fields": [
+    {
+      "type": "string",
+      "name": "test",
+      "description": "1234",
+      "label": "test"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "license": "MIT",
+  "scripts": {
+    "start:server": "yarn run ts-node server.ts"
+  },
+  "dependencies": {
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "fs": "^0.0.1-security",
+    "http-proxy-middleware": "^0.19.1",
+    "node-ts": "^5.0.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.24",
+    "ts-node": "^8.0.2",
+    "typescript": "^2.4.2"
+  }
+}

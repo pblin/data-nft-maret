@@ -1,0 +1,10 @@
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+/*  background-color: lightskyblue; */
+    /* background-image: url('img/city_background_op.jpg'); */
+    background-size: 600px 300px;
+  background-color: #FFFFFF !important;
+}
+

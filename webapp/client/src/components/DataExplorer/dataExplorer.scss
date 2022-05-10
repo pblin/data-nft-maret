@@ -1,0 +1,17 @@
+.data-explorer {
+  margin-top: 20px;
+
+  .page-section {
+    margin-left: 8px;
+  }
+
+  .schema-field-table {
+    .link {
+      color: #007ad9;
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+}

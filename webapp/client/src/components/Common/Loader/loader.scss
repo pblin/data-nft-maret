@@ -1,0 +1,20 @@
+@import '../../../styles/vars';
+
+.spinner {
+  animation: rotation 2s infinite linear;
+  font-size: 60px !important;
+  color: $primary-light;
+  display: block !important;
+  margin: auto;
+  opacity: .5;
+  margin-top: 200px;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

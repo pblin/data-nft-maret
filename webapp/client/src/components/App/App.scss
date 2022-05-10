@@ -1,0 +1,109 @@
+@import '../../styles/vars';
+
+.App {
+  text-align: left;
+}
+
+#avatar {
+  background: $secondary-main;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+#root {
+  overflow-x: hidden;
+  padding-bottom: 20px;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.app-link a{
+  color: $secondary-dark;
+  font-family: $app-font-main;
+}
+
+.app-link a div {
+  line-height: 30px;
+  display: inline-block;
+  position: relative;
+  bottom: 5px;
+}
+
+.app-link a svg {
+  font-size: 24px;
+}
+
+.tab-bar {
+  margin-top: 0px;
+  height: 40px !important;
+  min-height: 40px !important;
+}
+
+.tab-bar .tab {
+  height: 40px !important;
+  min-height: 40px !important;
+}
+
+/* WRAPPER */
+
+.app-section-wrapper {
+   width: 95%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin-top: 30px;
+ }
+
+.section-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.app-section-wrapper-lg {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.app-section-wrapper-90 {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.content-container {
+  padding: $content-padding;
+}
+
+/* App Wide CSS CLASSES */
+.grow {
+  flex-grow: 1;
+}
+

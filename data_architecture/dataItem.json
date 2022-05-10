@@ -1,0 +1,14 @@
+{
+  "@context": "https://schema.rebloc.io/rebloc",
+  "subject": "name of the subject e.g. address",
+  "hash_of_value": "hash of the value of subject",
+  "source_url": "url of the data location",
+  "data_key": "encrypted data key",
+  "bid": "bid price for data",
+  "ask": "ask price for data",
+  "last": "settled price",
+  "wallet_address": "Ethereum wallet_address",
+  "seller_sig": "signature of data seller's signature",
+  "buyer_sig": "signature of buyer"
+}
+

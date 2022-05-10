@@ -1,0 +1,148 @@
+@import '../../../styles/vars';
+
+.wizard-wrapper {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.wizard-wrapper .wizard-button {
+  margin-right: 10px;
+}
+
+.json-details {
+  font-size: 15px;
+  font-weight: 200;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.stepper {
+  width: 100%;
+}
+
+/*Dialog*/
+.dialog-header {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.dialog-subheader {
+  text-align: center;
+  color: #999999 !important;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.dialog-header .bold {
+  font-weight: 900;
+  font-size: 24px !important;
+}
+
+.cancel-btn {
+  border: 1px solid #dddddd !important;
+  margin-left: 10px !important;
+}
+
+/*Datatable*/
+.schema-dt {
+  margin-bottom: 20px;
+  width: 100%;
+  overflow-x: auto;
+  .table {
+    width: 100%;
+    thead tr, tfoot td > div, tfoot tr {
+      height: 40px !important;
+      min-height: 40px;
+    }
+    th {
+      padding-top: 0px;
+      padding-bottom: 0px;
+      border: none;
+      p {
+        font-weight: bold;
+      }
+    }
+  }
+  p {
+    font-size: 12px;
+    padding: 5px 5px 5px 10px;
+
+    &.description-field {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      display: block;
+      width: 400px;
+    }
+  }
+  .name-field {
+    font-weight: bold;
+  }
+  .type-field {
+    font-weight: 900;
+    color: $secondary-dark;
+  }
+}
+
+.schema .p-datatable {
+  border: 1px solid #e1e1e1;
+}
+
+.schema-dt .p-sortable-column-icon{
+  color: #6e6e6e !important;
+  font-weight: bold;
+}
+
+.schema-dt .p-datatable-tbody {
+  font-size: 12px;
+  font-family: Roboto;
+}
+
+.schema-dt .p-datatable .p-datatable-scrollable-header {
+  border-bottom: 1px solid #e1e1e1;
+  border-top: 1px solid #e1e1e1;
+  background-color: #FFFFFF;
+}
+
+.schema-dt .p-datatable-tbody tr td p {
+  text-overflow: ellipsis;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 0px;
+}
+
+.schema-dt .p-datatable .p-datatable-tbody tr {
+  background-color: #FFFFFF !important;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.schema-dt .p-datatable .p-datatable-tbody tr td {
+  border: none;
+}
+
+.schema-dt .p-datatable .p-datatable-thead tr th {
+  border: none;
+  background: #FFFFFF;
+  font-size: 15px;
+  font-family: Roboto;
+  color: #636363 !important;
+  font-weight: bold;
+  text-align: left;
+  /*border-bottom: 1px solid #e1e1e1;
+  border-top: 1px solid #e1e1e1;*/
+}
+
+
+/* Basic Info Form */
+.card-mode {
+  .basic-form-input {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}

@@ -1,0 +1,5 @@
+export enum DATASET_STAGE {
+  SCHEMA_UPLOADED = 1,
+  SAVED = 2,
+  PUBLISHED = 3
+}

@@ -1,0 +1,178 @@
+@import '../../styles/vars';
+
+.notification-label {
+  padding: 13px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.notification-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+.notification-warning {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+}
+
+.notification-error {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+/* Jumbo-paper */
+
+.jumbo-paper {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  padding: 10px;
+}
+/* Refactor this into different app buttons*/
+.jumbo-paper .jumbo-title {
+  font-weight: 300;
+  padding: 20px 0 0 20px;
+}
+
+.jumbo-paper .jumbo-button {
+  background: #668eac;
+  color: white;
+  margin: 20px;
+}
+
+.jumbo-paper .jumbo-button:hover {
+  background: #4D6B82
+}
+
+/* File Upload */
+.drop-zone {
+  border: 1px dotted black;
+  .upload-icon {
+    width: 60px;
+    height: 60px;
+    color: $secondary-main;
+  }
+  .file-input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+
+    &:focus + label {
+      outline: 1px dotted #000;
+      outline: -webkit-focus-ring-color auto 5px;
+    }
+  }
+  .file-input-label {
+    background-color: $secondary-main;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: 500;
+    margin-top: 25px;
+    cursor: pointer;
+    &:hover {
+      background-color: $secondary-dark;
+    }
+    p {
+      color: #fff;
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+}
+
+/*.file-input:focus + label {
+  outline: 1px dotted #000;
+  outline: -webkit-focus-ring-color auto 5px;
+}*/
+
+.file-input + label * {
+  pointer-events: none;
+}
+
+/*Filter Menu*/
+
+.filter-menu {
+  padding: 0px 0px 0px 0px !important;
+  font-size: 14px;
+  height: 36px;
+  margin-bottom: 5px;
+  margin-right: 20px;
+}
+
+.filter-menu button {
+  padding: 5px 5px 5px 0px;
+}
+
+.filter-menu .search {
+  padding: 2px 20px;
+  display: inline-block;
+  width: 300px;
+}
+
+/* Inline Edit Form */
+.inline-edit-form {
+  width: 100%;
+}
+
+/* Common Table SCSS*/
+.common-table {
+  width: 100%;
+  thead tr, tfoot td > div, tfoot tr {
+    height: 40px !important;
+    min-height: 40px;
+  }
+  th {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    height: 0px;
+    border: none;
+    p {
+      font-weight: bold;
+    }
+  }
+  tr {
+    td {
+      width: 100px !important;
+      p {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        display: block;
+        width: 100px;
+      }
+    }
+  }
+}
+
+/* Dynamic Toolbar */
+.dynamic-toolbar {
+  position: sticky !important;
+  left: 0;
+  .title-container {
+    flex-grow: 1;
+  }
+  button {
+    margin-right: 5px;
+  }
+}
+
+.scroll-paper {
+  max-height: 500px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+  &:hover {
+    overflow-x: auto;
+    overflow-y: auto;
+  }
+}

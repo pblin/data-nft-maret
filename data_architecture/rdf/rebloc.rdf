@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:vann="http://purl.org/vocab/vann/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+  <owl:Ontology rdf:about="http://schema.rebloc.io/rebloc">
+    <dcterms:title>Rebloc Vocab</dcterms:title>
+    <dcterms:description>Rebloc vocabulary for real estate data.</dcterms:description>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-11-30</dcterms:modified>
+    <vann:preferredNamespaceUri>http://schema.rebloc.io/rebloc#</vann:preferredNamespaceUri>
+    <vann:preferredNamespacePrefix>rebloc</vann:preferredNamespacePrefix>
+    <foaf:homepage rdf:resource="http://schema.rebloc.io/rebloc.html"/>
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-11-27</dcterms:created>
+    <dcterms:publisher rdf:resource="http://schema.rebloc.io/rebloc#Rebloc"/>
+    <dcterms:partOf rdf:resource="http://schema.rebloc.io"/>
+    <dcterms:type rdf:resource="http://purl.org/adms/assettype/Ontology"/>
+    <dcterms:status rdf:resource="http://purl.org/adms/status/UnderDevelopment"/>
+    <dc:creator rdf:resource="http://schema.rebloc.io/rebloc#admin"/>
+  </owl:Ontology>
+
+  <foaf:Person rdf:about="http://schema.rebloc.io/rebloc#admin">
+    <foaf:name>Bernard Lin</foaf:name>
+  </foaf:Person>
+
+  <dcterms:Agent rdf:about="http://schema.rebloc.io/rebloc#Rebloc">
+    <foaf:member rdf:resource="http://schema.rebloc.io/rebloc#admin"/>
+    <foaf:name>Rebloc</foaf:name>
+    <foaf:homepage rdf:resource="http://rebloc.io"/>
+  </dcterms:Agent>
+
+  <rdfs:Class rdf:about="http://schema.rebloc.io/rebloc#lot">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Lot</rdfs:label>
+    <rdfs:comment>Taxable lot </rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdfs:Class>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#low_street_number">
+    <rdfs:label>Low Street Number</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://schema.rebloc.io/rebloc#address"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#high_street_number">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>High Street Number</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://schema.rebloc.io/rebloc#address"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#address">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Address</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#street_name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Street Name</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://schema.rebloc.io/rebloc#address"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#addresses">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Addresses</rdfs:label>
+    <rdfs:comment>All addresses</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://schema.rebloc.io/rebloc#address"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#postal_code">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Postal Code</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.geonames.org/ontology#postalCode"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#state_province">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>State/Province</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://schema.rebloc.io/rebloc#address"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#country">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Country</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://schema.rebloc.io/rebloc#address"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#bbl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>BBL</rdfs:label>
+    <rdfs:comment>Tax Borough, Block, and Lot (BBL). </rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#easement_count">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Easement Count</rdfs:label>
+    <rdfs:comment>The number of easements on the tax lot</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#easement_type">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Easement Type</rdfs:label>
+    <rdfs:comment>The type of use permitted by the easement on the property:
+</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#owner_name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Lot Owner Name</rdfs:label>
+    <rdfs:comment>Name of person or entity that owns the tax lot</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#area_sq_ft">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Area Square Footage</rdfs:label>
+    <rdfs:comment>Square footage of the lot area</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#neighborhood_id">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Neighborhood ID</rdfs:label>
+    <rdfs:comment>The id of the neighborhood. Neighborhoods having id &gt;= 1000 are for Level 0 (duplicated) and do not showing up in the menu.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Neighborhood Name</rdfs:label>
+    <rdfs:comment>The name of the neighbourhood.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#geom">
+    <rdfs:label>Geometry</rdfs:label>
+    <rdfs:comment>The geometry of the neighborhood boundary.</rdfs:comment>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#document_id">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Document ID</rdfs:label>
+    <rdfs:comment>Unique document ID</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#recorded_date">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Recorded Date</rdfs:label>
+    <rdfs:comment>Legal date instrument was recorded</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#document_type_description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Document Type Description</rdfs:label>
+    <rdfs:comment>Document type description</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#class">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Class</rdfs:label>
+    <rdfs:comment>Document class description</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#city_register_file_number">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>City Register File Number</rdfs:label>
+    <rdfs:comment>File number for reference</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#document_date">
+    <rdfs:label>Document Date</rdfs:label>
+    <rdfs:comment>Date of Document without time zone</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#document_amount">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Document Amount</rdfs:label>
+    <rdfs:comment>Principal debt or obligation</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#party_names">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Party Names</rdfs:label>
+    <rdfs:comment>Name of party (last name, first name MI)</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#party_addresses">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Party Addresses</rdfs:label>
+    <rdfs:comment>Name attention or address</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#document_type_code">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Document Type</rdfs:label>
+    <rdfs:comment>Document type code</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#party_types">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Party Types</rdfs:label>
+    <rdfs:comment>Party types</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#assessed_land_value_2019">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>2019 assessed land value</rdfs:label>
+    <rdfs:comment>The final tentative assessed land value for Fiscal Year 2019</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#assessed_total_value_2019">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>2019 assessed total value</rdfs:label>
+    <rdfs:comment>The final tentative assessed total value for Fiscal Year 2019</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#assessor_district_code">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Assessor District Code</rdfs:label>
+    <rdfs:comment>Assessor district code</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#beginning_fiscal_year_tax_class">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Old Tax Class</rdfs:label>
+    <rdfs:comment>The Tax Class at the beginning of the fiscal year</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#cbn_tax_class">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>CBN Tax Class</rdfs:label>
+    <rdfs:comment>CBN Tax Class</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#current_tax_class_code">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Tax Class</rdfs:label>
+    <rdfs:comment>Current Property Tax Class Code (New York State classification)
+ </rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#exempt_class_code">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Exemption Tax Class</rdfs:label>
+    <rdfs:comment>Exemption Class - used for fully exempt properties only</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#exempt_property_restored_on">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Exempt property restored date</rdfs:label>
+    <rdfs:comment>Exempt property restored date</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#file_year">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Year of File</rdfs:label>
+    <rdfs:comment>Four digit year of the file</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#negativeInteger"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#final_actual_assessed_land_value">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Final Actual Assessed Land Value</rdfs:label>
+    <rdfs:comment>Final Actual Assessed Land Value</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#final_actual_assessed_total_value">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Final Actual Assessed Total Value</rdfs:label>
+    <rdfs:comment>Final Actual Assessed Total Value</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#final_transitional_exempt_total_value">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>final_transitional_exempt_total_value</rdfs:label>
+    <rdfs:comment>Final Transitional Exempt Total Value</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#is_legislation_capped">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Assessed Value Legislation Cap</rdfs:label>
+    <rdfs:comment>Assessed Value Legislation Cap</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#is_old_av_legislation_capped">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Old AV Legislation Capped</rdfs:label>
+    <rdfs:comment>Old AV Legislation Capped</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#last_descriptive_changed_on">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>last_descriptive_changed_on</rdfs:label>
+    <rdfs:comment>Date of last descriptive change</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#money_final_changed_on">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Date of the latest Final money change</rdfs:label>
+    <rdfs:comment>Date of the last money change occurring during the Final Value. If the date contains 00/00/0000 then the final assessed values are the same as the tentative values</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#money_tentative_changed_on">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Date of the latest Tentative Period money change</rdfs:label>
+    <rdfs:comment>Date of the last money change occurring during the Tentative Period or the date of the last money change made during the Change By Notice Period. If the date contains 00/00/0000 then the tentative assessed values are the same as the current assessed values</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#new_market_land_value">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>New Market Value of Land</rdfs:label>
+    <rdfs:comment>New Market Value of Land</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#new_market_value_of_property">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>New Total Market Value of Property</rdfs:label>
+    <rdfs:comment>If not zero, new Total Market Value of property</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#old_protest_applicant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>old_protest_applicant</rdfs:label>
+    <rdfs:comment>Type of applicant applying for a tax commission reduction (Old)</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#old_protest_attorney_id">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>old_protest_attorney_id</rdfs:label>
+    <rdfs:comment>old_protest_attorney_id</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#old_protest_code">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>old_protest_code</rdfs:label>
+    <rdfs:comment>Previous challenge to the Department of Finance’s assessments and corrections of erroneous information associated with the lot.
+</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#property_exemptions_count">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Number of Exemptions</rdfs:label>
+    <rdfs:comment>Counter containing the number of exemptions on the property</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#protest_attorney_id_1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Protest Attorney Group</rdfs:label>
+    <rdfs:comment>Protest Attorney identification number</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#protest_attorney_id_2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Protest Attorney Group 2</rdfs:label>
+    <rdfs:comment>Protest Attorney identification number</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#protest_code_1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Protest Code</rdfs:label>
+    <rdfs:comment>Challenges to the Department of Finance’s assessments and corrections of erroneous information associated with the lot.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#protest_code_2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Protest Code 2</rdfs:label>
+    <rdfs:comment>Challenges to the Department of Finance’s assessments and corrections of erroneous information associated with the lot:
+</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#ruec_id">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>REUC Identification Number</rdfs:label>
+    <rdfs:comment>Contains the identification number (alpha/numeric) for REUC properties
+</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#tax_map_id">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Tax Map ID</rdfs:label>
+    <rdfs:comment>The Department of Finance paper tax map Volume Number associated with the tax block and lot</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#tax_reduction_applicant_type_1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Protest Applicant Type</rdfs:label>
+    <rdfs:comment>The type of applicant applying for a tax commission reduction</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#tax_reduction_applicant_type_2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Protest Applicant Type 2</rdfs:label>
+    <rdfs:comment>The type of applicant applying for a tax commission reduction</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#total_market_value">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Total Market Value</rdfs:label>
+    <rdfs:comment>Market value per the city assessor</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#assessed_value">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Assessed Value</rdfs:label>
+    <rdfs:comment>Assessed value calculated from the market value and the assessment ratio for the tax class</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#value">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Value</rdfs:label>
+    <rdfs:comment>The lesser of the maximum assessed value and calculated assessed value</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#rate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Rate</rdfs:label>
+    <rdfs:comment>The tax rate for the given rate year</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#pre_abate_exempt">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Tax Pre Abatements and Exemptions</rdfs:label>
+    <rdfs:comment>Tax amount before abatements and exemptions</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#final">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Final</rdfs:label>
+    <rdfs:comment>The final tax amount after abatements and exemptions</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#curext">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Current Exemptions</rdfs:label>
+    <rdfs:comment>The current exemptions amounts for the property</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#cur_abate_total">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Current Abatement Total</rdfs:label>
+    <rdfs:comment>The current abatement amounts for the property</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#ar_1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Assessment Ratio 1</rdfs:label>
+    <rdfs:comment>The assessment ratio for tax class 1 properties</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#ar_234">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Assessment Ratio 2,3,4</rdfs:label>
+    <rdfs:comment>The assessment ratio for tax class 2,3,4 properties</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#land_use">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>New York City Zoning</rdfs:label>
+    <rdfs:comment>New York City Zoning code</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#extension_type">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Extension Type</rdfs:label>
+    <rdfs:comment>Type of extension on the lot:
+</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#final_transitional_assessed_land_value">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Final Transitional Assessed Land Value</rdfs:label>
+    <rdfs:comment>Final Transitional Assessed Land Value</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#final_transitional_assessed_total_value">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Final Transitional Assessed Total Value</rdfs:label>
+    <rdfs:comment>Final Transitional Assessed Total Value</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://schema.rebloc.io/rebloc#final_transitional_exempt_land_value">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Final Transitional Exempt Land Value</rdfs:label>
+    <rdfs:comment>Final Transitional Exempt Land Value</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
+  </rdf:Property>
+
+</rdf:RDF>

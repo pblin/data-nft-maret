@@ -1,0 +1,45 @@
+.order-container {
+  padding: 10px;
+  .order-item {
+    max-width: 910px;
+    margin-top: 10px;
+    .order-item-container {
+      padding: 20px;
+    }
+  }
+  .image-container {
+    height: 75px;
+    width: 75px;
+    border: 1px solid black;
+    background: #cccccc;
+    margin-right: 20px;
+    p {
+      line-height: 75px;
+      text-align: center;
+      margin: 0;
+      color: #9e9e9e;
+    }
+  }
+
+  .title-container {
+    padding-bottom: 0px;
+  }
+
+  .order-cta {
+    margin-bottom: 5px;
+    width: 100%
+  }
+
+  .app-link {
+    width: 100%;
+    color: #0066c0;
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  .price-text {
+    color: #b12605;
+  }
+}

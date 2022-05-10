@@ -1,0 +1,16 @@
+{
+  "fields": [
+    {
+      "type": "string",
+      "name": "test",
+      "description": 1234
+    },
+    {
+      "type": "string",
+      "name": 12345,
+      "description": "another",
+      "badField": 1234
+    }
+  ],
+  "schema_name": "badFile3"
+}
